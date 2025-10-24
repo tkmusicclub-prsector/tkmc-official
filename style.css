@@ -40,13 +40,12 @@ body {
     }
 }
 
-/* メニューバー */
 #menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     opacity: 0;
     transition: opacity 1s ease;
     z-index: 100;
@@ -81,7 +80,7 @@ body {
 }
 
 #hero-logo {
-    width: 540px;
+    width: 640px;
     opacity: 0;
     transition: opacity 2s ease;
 }
@@ -90,4 +89,26 @@ body {
 #content {
     height: 1000px; /* とりあえず高さを確保 */
     background-color: black;
+}
+
+@media (max-width: 768px) {
+    /* タブレット・スマホ */
+    #menu nav ul {
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    #hero-logo {
+        width: 150px;
+        max-width: 70vw;
+    }
+}
+
+@media (max-width: 480px) {
+    /* スマホ */
+    #hero-logo {
+        width: 120px;
+        max-width: 80vw;
+    }
 }
