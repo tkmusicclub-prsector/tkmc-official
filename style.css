@@ -99,6 +99,7 @@ body {
 /* ヒーローセクション */
 #hero {
     height: 100vh;
+    width: 100%;
     background-image: url("images/top_background.png");
     background-size: cover;
     background-position: center;
@@ -110,7 +111,9 @@ body {
 }
 
 #hero-logo {
-    width: 640px;
+    width: 90vw;
+    max-width: 640px;
+    height: auto;
     opacity: 0;
     transition: opacity 2s ease;
 }
@@ -139,8 +142,20 @@ body {
         right: 0;
     }
 
+    #hero-logo {
+        width: 90vw;  /* 画面横幅いっぱい */
+        height: auto;
+    }
+
     /* ハンバーガーメニュー表示 */
     .hamburger {
         display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero-logo {
+        width: 95vw;  /* 小さいスマホは少し余白 */
+        height: auto;
     }
 }
