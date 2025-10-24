@@ -1,10 +1,8 @@
-/* ページ全体の初期設定 */
 body {
     margin: 0;
     font-family: sans-serif;
 }
 
-/* スプラッシュ（ロゴ）画面 */
 #splash {
     position: fixed;
     inset: 0;
@@ -14,7 +12,7 @@ body {
     align-items: center;
     z-index: 100;
     opacity: 1;
-    transition: opacity 1s ease; /* フェードアウト用 */
+    transition: opacity 1s ease;
 }
 
 #splash.fade-out {
@@ -22,7 +20,6 @@ body {
     pointer-events: none;
 }
 
-/* ロゴ画像 */
 #splash-logo {
     width: 200px;
     opacity: 0;
@@ -31,12 +28,11 @@ body {
 
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.9); }
-    to   { opacity: 1; transform: scale(1); }
+    to { opacity: 1; transform: scale(1); }
 }
 
-/* メインページ */
 #main-content {
-    display: none; /* 最初は隠す */
+    display: none;
     text-align: center;
     padding-top: 100px;
 }
