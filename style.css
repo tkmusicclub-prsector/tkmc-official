@@ -22,7 +22,7 @@ body {
 
 /* ロゴ画像 */
 #splash-logo {
-    width: 360px;
+    width: 300px;
     opacity: 0;
     clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%); /* 左下に点1つ */
     animation: revealDiagonal 2s forwards;
@@ -81,7 +81,7 @@ body {
 }
 
 #hero-logo {
-    width: 200px;
+    width: 540px;
     opacity: 0;
     transition: opacity 2s ease;
 }

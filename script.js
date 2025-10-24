@@ -1,26 +1,22 @@
 window.addEventListener('load', () => {
     const splash = document.getElementById('splash');
+    const heroLogo = document.getElementById('hero-logo');
+    const menu = document.getElementById('menu');
 
-  // 3秒後にスプラッシュをフェードアウト
+    // スプラッシュを3秒表示してフェードアウト
     setTimeout(() => {
         splash.classList.add('fade-out');
         setTimeout(() => {
             splash.style.display = 'none';
-        }, 1000);
-    }, 3000);
-});
 
-window.addEventListener('load', () => {
-    // ヒーローロゴフェードイン
-    const heroLogo = document.getElementById('hero-logo');
-    setTimeout(() => {
-        heroLogo.style.opacity = 1;
-    }, 200); // 少し遅延してフェードイン
+            // スプラッシュ消えたらヒーローロゴフェードイン
+            heroLogo.style.opacity = 1;
+        }, 500); // フェードアウトのトランジション時間に合わせる
+    }, 3000);
 
     // スクロールでメニューバー表示
-    const menu = document.getElementById('menu');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) { // 50pxスクロールしたら
+        if (window.scrollY > 50) {
             menu.style.opacity = 1;
         } else {
             menu.style.opacity = 0;
