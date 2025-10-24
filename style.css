@@ -24,35 +24,14 @@ body {
 /* ロゴ画像 */
 #splash-logo {
     width: 300px;
+    /* 初期状態：中央固定・透明・少し左下にずらして小さく */
     opacity: 0;
-    transform: scale(0.9);
-    -webkit-mask-image: linear-gradient(135deg, transparent 0%, black 100%);
-    mask-image: linear-gradient(135deg, transparent 0%, black 100%);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: 0% 0%;
-    mask-size: 0% 0%;
-    animation: revealDiagonal 2s forwards;
-}
-
-/* 左下→右上に斜め直線でフェードイン＆少しズーム */
-@keyframes revealDiagonal {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-        -webkit-mask-size: 0% 0%;
-        mask-size: 0% 0%;
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-        -webkit-mask-size: 200% 200%;
-        mask-size: 200% 200%;
-    }
+    transform: translate(-50px, 50px) scale(0.9);
+    transition: transform 2s ease, opacity 2s ease;
 }
 
 /* メインコンテンツ */
-#main-content {
+#main {
     display: none;
     text-align: center;
     padding-top: 100px;
