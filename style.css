@@ -40,9 +40,54 @@ body {
     }
 }
 
-/* メインコンテンツ */
-#main {
-    display: none;
-    text-align: center;
-    padding-top: 100px;
+/* メニューバー */
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 100;
+}
+
+#menu nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+#menu nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ヒーローセクション */
+#hero {
+    height: 100vh;
+    background-image: url('images/top_background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#hero-logo {
+    width: 200px;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+/* 黒背景セクション */
+#content {
+    height: 1000px; /* とりあえず高さを確保 */
+    background-color: black;
 }
