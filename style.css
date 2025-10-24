@@ -1,82 +1,50 @@
 body {
-    margin: 0;
-    font-family: sans-serif;
+  margin: 0;
+  font-family: sans-serif;
 }
 
 /* スプラッシュ画面 */
 #splash {
-    position: fixed;
-    inset: 0;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    opacity: 1;
-    transition: opacity 1s ease;
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 1s ease;
 }
 
 #splash.fade-out {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* ロゴコンテナ */
-.logo-container {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* ロゴ画像 */
 #splash-logo {
-    width: 100%;
-    height: 100%;
-    transform: scale(0.9);
+  width: 300px; /* サイズを少し大きく */
+  /* 初期状態：中央固定・完全に透明 */
+  opacity: 0;
+  clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%); /* 左下に点1つ */
+  animation: revealDiagonal 2s forwards;
+}
+
+/* 左下→右上にフェードイン */
+@keyframes revealDiagonal {
+  0% {
     opacity: 0;
-    animation: squareFadeZoom 2s forwards;
-}
-
-/* 正方形的に広がるフェードイン + 少しズームアップ */
-@keyframes squareFadeZoom {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* 光のライン演出 */
-.shine {
-    position: absolute;
-    top: 0;
-    left: -50%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.0) 100%);
-    transform: rotate(45deg) translateX(-100%);
-    animation: shineMove 2s forwards;
-    pointer-events: none;
-}
-
-@keyframes shineMove {
-    0% {
-        transform: rotate(45deg) translateX(-100%);
-        opacity: 0.5;
-    }
-    100% {
-        transform: rotate(45deg) translateX(200%);
-        opacity: 0;
-    }
+    clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);
+  }
+  100% {
+    opacity: 1;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); /* 全体表示 */
+  }
 }
 
 /* メインコンテンツ */
-#main-content {
-    display: none;
-    text-align: center;
-    padding-top: 100px;
+#main {
+  display: none;
+  text-align: center;
+  padding-top: 100px;
 }
