@@ -34,12 +34,12 @@ window.addEventListener('load', () => {
             navLinks.style.display = 'flex';
             setTimeout(() => {
                 navLinks.classList.add('fade-in');
-            }, 1000);
+            }, 500);
         } else {
             navLinks.classList.remove('fade-in');
             setTimeout(() => {
                 navLinks.style.display = 'none';
-            }, 1000);
+            }, 500);
         }
     });
 });
