@@ -32,14 +32,16 @@ window.addEventListener('load', () => {
     // フェードイン・アウトの制御
         if (navLinks.classList.contains('open')) {
             navLinks.style.display = 'flex';
+            navLinks.classList.remove('fade-out');
             setTimeout(() => {
                 navLinks.classList.add('fade-in');
-            }, 500);
+            }, 300);
         } else {
             navLinks.classList.remove('fade-in');
+            navLinks.classList.add('fade-out');
             setTimeout(() => {
                 navLinks.style.display = 'none';
-            }, 500);
+            }, 300);
         }
     });
 });
