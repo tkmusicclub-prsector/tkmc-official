@@ -200,6 +200,39 @@ body {
     .hamburger {
         display: flex;
     }
+
+    /* ハンバーガーメニュー（モバイル用） */
+    #nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        display: none;
+        transition: opacity 0.3s ease;
+        z-index: 999;
+    }
+
+/* 開いたときにフェードイン */
+    #nav-links.fade-in {
+        opacity: 1;
+    }
+
+/* メニュー内リンク */
+    #nav-links li {
+        margin: 20px 0;
+    }
+
+    #nav-links a {
+        color: white;
+        font-size: 1.8rem;
+        text-decoration: none;
+    }
 }
 
 @media (max-width: 480px) {
