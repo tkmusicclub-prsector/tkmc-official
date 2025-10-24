@@ -206,15 +206,18 @@ body {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         background: rgba(0, 0, 0, 0.9);
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         opacity: 0;
         display: none;
         z-index: 999;
+        margin: 0;
+        padding-left: 0;
+        box-sizing: border-box;
     }
 
     #nav-links.fade-in {
