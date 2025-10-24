@@ -23,36 +23,27 @@ body {
 
 /* ロゴ画像 */
 #splash-logo {
-  width: 200px;
-  opacity: 1;
-  /* 初期状態で左下から透明なグラデーションをかける */
-  mask-image: linear-gradient(to top right, transparent 0%, black 100%);
-  -webkit-mask-image: linear-gradient(to top right, transparent 0%, black 100%);
+  width: 360px; /* サイズを少し大きく */
+  /* 初期状態：中央固定・完全に透明 */
+  opacity: 0;
+  clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%); /* 左下に点1つ */
   animation: revealDiagonal 2s forwards;
 }
 
-/* 左下→右上にマスクを動かすアニメーション */
+/* 左下→右上にフェードイン */
 @keyframes revealDiagonal {
-  from {
-    mask-position: 200% 200%;
-    -webkit-mask-position: 200% 200%;
+  0% {
+    opacity: 0;
+    clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);
   }
-  to {
-    mask-position: 0% 0%;
-    -webkit-mask-position: 0% 0%;
+  100% {
+    opacity: 1;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); /* 全体表示 */
   }
-}
-
-/* マスク設定 */
-#splash-logo {
-  mask-size: 200% 200%;
-  -webkit-mask-size: 200% 200%;
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
 }
 
 /* メインコンテンツ */
-#main-content {
+#main {
   display: none;
   text-align: center;
   padding-top: 100px;
