@@ -99,6 +99,7 @@ body {
 /* ヒーローセクション */
 #hero {
     height: 100vh;
+    height: 100svh;
     width: 100%;
     background-image: url("images/top_background.png");
     background-size: cover;
