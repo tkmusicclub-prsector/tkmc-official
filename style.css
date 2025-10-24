@@ -1,44 +1,59 @@
 body {
-    margin: 0;
-    font-family: sans-serif;
+  margin: 0;
+  font-family: sans-serif;
 }
 
+/* スプラッシュ画面 */
 #splash {
-    position: fixed;
-    inset: 0;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    opacity: 1;
-    transition: opacity 1s ease;
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 1s ease;
 }
 
 #splash.fade-out {
-    opacity: 0;
-    pointer-events: none;
+  opacity: 0;
+  pointer-events: none;
 }
 
+/* ロゴ画像 */
 #splash-logo {
-    width: 200px;
-    opacity: 0;
-    animation: fadeInDiagonal 1.8s forwards;
+  width: 200px;
+  opacity: 1;
+  /* 初期状態で左下から透明なグラデーションをかける */
+  mask-image: linear-gradient(to top right, transparent 0%, black 100%);
+  -webkit-mask-image: linear-gradient(to top right, transparent 0%, black 100%);
+  animation: revealDiagonal 2s forwards;
 }
 
-@keyframes fadeInDiagonal {
-    from {
-        opacity: 0;
-        transform: translate(-40px, 40px) scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0, 0) scale(1);
-    }
+/* 左下→右上にマスクを動かすアニメーション */
+@keyframes revealDiagonal {
+  from {
+    mask-position: 200% 200%;
+    -webkit-mask-position: 200% 200%;
+  }
+  to {
+    mask-position: 0% 0%;
+    -webkit-mask-position: 0% 0%;
+  }
 }
 
+/* マスク設定 */
+#splash-logo {
+  mask-size: 200% 200%;
+  -webkit-mask-size: 200% 200%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+
+/* メインコンテンツ */
 #main-content {
-    display: none;
-    text-align: center;
-    padding-top: 100px;
+  display: none;
+  text-align: center;
+  padding-top: 100px;
 }
