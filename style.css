@@ -51,18 +51,18 @@ body {
     z-index: 100;
 }
 
+#menu .logo img {
+    height: 40px;         /* メニューに合わせた高さ */
+    width: auto;           /* 縦横比を保持 */
+    display: block;
+}
+
+/* nav 内の配置調整 */
 #menu nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-}
-
-/* ロゴ */
-#menu .logo {
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
+    padding: 10px 30px;   /* 余白を少し広げてロゴ分スペース確保 */
 }
 
 /* PC用：通常メニュー */
