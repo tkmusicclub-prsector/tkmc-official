@@ -14,12 +14,16 @@ window.addEventListener('load', () => {
         }, 500); // フェードアウトのトランジション時間に合わせる
     }, 3000);
 
-    // スクロールでメニューバー表示
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             menu.style.opacity = 1;
         } else {
             menu.style.opacity = 0;
         }
+    });
+
+    // ハンバーガーメニュークリックで表示切替
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
     });
 });
