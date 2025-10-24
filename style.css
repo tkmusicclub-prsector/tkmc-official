@@ -81,7 +81,7 @@ body {
 }
 
 .hamburger {
-    display: none; /* PCでは非表示 */
+    display: none;
     flex-direction: column;
     justify-content: space-around;
     width: 25px;
@@ -94,6 +94,55 @@ body {
     height: 3px;
     background: white;
     border-radius: 2px;
+}
+
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 15, 15, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s;
+    z-index: 1000;
+}
+
+.fullscreen-menu ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.fullscreen-menu ul li {
+    margin: 20px 0;
+}
+
+.fullscreen-menu ul li a {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.fullscreen-menu ul li a:hover {
+    color: #00bfff;
+}
+
+/* ====== 開いたときの状態 ====== */
+.fullscreen-menu.active {
+    opacity: 1;
+    visibility: visible;
+    animation: slideDown 0.6s ease forwards;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20%); }
+    to { transform: translateY(0); }
 }
 
 /* ヒーローセクション */

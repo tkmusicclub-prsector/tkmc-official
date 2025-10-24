@@ -26,6 +26,20 @@ window.addEventListener('load', () => {
 
     // ハンバーガーメニュークリックで表示切替
     hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('open');
+
+    // フェードイン・アウトの制御
+        if (navLinks.classList.contains('open')) {
+            navLinks.style.display = 'flex';
+            setTimeout(() => {
+                navLinks.classList.add('fade-in');
+            }, 10);
+        } else {
+            navLinks.classList.remove('fade-in');
+            setTimeout(() => {
+                navLinks.style.display = 'none';
+            }, 300);
+        }
     });
 });
