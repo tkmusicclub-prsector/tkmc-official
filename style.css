@@ -1,50 +1,59 @@
 body {
-  margin: 0;
-  font-family: sans-serif;
+    margin: 0;
+    font-family: sans-serif;
 }
 
 /* スプラッシュ画面 */
 #splash {
-  position: fixed;
-  inset: 0;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-  opacity: 1;
-  transition: opacity 1s ease;
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    opacity: 1;
+    transition: opacity 1s ease;
 }
 
 #splash.fade-out {
-  opacity: 0;
-  pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* ロゴ画像 */
 #splash-logo {
-  width: 360px; /* サイズを少し大きく */
-  /* 初期状態：中央固定・完全に透明 */
-  opacity: 0;
-  clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%); /* 左下に点1つ */
-  animation: revealDiagonal 2s forwards;
+    width: 300px;
+    opacity: 0;
+    transform: scale(0.9);
+    -webkit-mask-image: linear-gradient(135deg, transparent 0%, black 100%);
+    mask-image: linear-gradient(135deg, transparent 0%, black 100%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 0% 0%;
+    mask-size: 0% 0%;
+    animation: revealDiagonal 2s forwards;
 }
 
-/* 左下→右上にフェードイン */
+/* 左下→右上に斜め直線でフェードイン＆少しズーム */
 @keyframes revealDiagonal {
-  0% {
-    opacity: 0;
-    clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);
-  }
-  100% {
-    opacity: 1;
-    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); /* 全体表示 */
-  }
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+        -webkit-mask-size: 0% 0%;
+        mask-size: 0% 0%;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        -webkit-mask-size: 200% 200%;
+        mask-size: 200% 200%;
+    }
 }
 
 /* メインコンテンツ */
-#main {
-  display: none;
-  text-align: center;
-  padding-top: 100px;
+#main-content {
+    display: none;
+    text-align: center;
+    padding-top: 100px;
 }
