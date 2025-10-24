@@ -2,6 +2,8 @@ window.addEventListener('load', () => {
     const splash = document.getElementById('splash');
     const heroLogo = document.getElementById('hero-logo');
     const menu = document.getElementById('menu');
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
 
     // スプラッシュを3秒表示してフェードアウト
     setTimeout(() => {
