@@ -18,9 +18,9 @@ window.addEventListener('load', () => {
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            menu.style.opacity = 1;
+            menu.classList.add('visible');  // ← opacity:1 に
         } else {
-            menu.style.opacity = 0;
+            menu.classList.remove('visible'); // ← opacity:0 に戻す
         }
     });
 
@@ -45,3 +45,16 @@ window.addEventListener('load', () => {
         }
     });
 });
+
+/*
+document.addEventListener('DOMContentLoaded', () => {
+    const menu = document.querySelector('#menu');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            menu.style.opacity = 1;
+        } else {
+            menu.style.opacity = 0;
+        }
+    });
+});*/
