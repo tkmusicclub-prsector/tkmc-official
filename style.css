@@ -1,5 +1,15 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -101,7 +111,7 @@ body {
     height: 100vh;
     height: 100svh;
     width: 100%;
-    background-image: url("images/top_background.png");
+    background-image: url("images/top_background.png") center center / cover no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -109,6 +119,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 
 #hero-logo {
