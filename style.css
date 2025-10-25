@@ -1,15 +1,7 @@
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
-}
-
 body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow-x: hidden;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -58,7 +50,7 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     opacity: 0;
     transition: opacity 1s ease;
-    z-index: 9999;
+    z-index: 100;
 }
 
 #menu.visible {
@@ -108,6 +100,10 @@ body {
     height: 3px;
     background: white;
     border-radius: 2px;
+}
+
+.fullscreen-menu {
+    display: none;
 }
 
 /* ヒーローセクション */
