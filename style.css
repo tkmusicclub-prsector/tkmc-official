@@ -111,9 +111,10 @@ body {
     height: 100vh;
     height: 100svh;
     width: 100%;
-    background-image: url("images/top_background.png") center center / cover no-repeat;
-    background-size: cover;
+    background-image: url("images/top_background.png");
     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
     justify-content: center;
@@ -152,6 +153,10 @@ body {
 
     #menu ul.show {
         right: 0;
+    }
+
+    #hero {
+        background-attachment: scroll; /* ← モバイルではこちら推奨 */
     }
 
     #hero-logo {
@@ -263,6 +268,10 @@ body {
 }
 
 @media (max-width: 480px) {
+    #hero {
+        background-attachment: scroll; /* ← モバイルではこちら推奨 */
+    }
+
     #hero-logo {
         width: 95vw;  /* 小さいスマホは少し余白 */
         height: auto;
