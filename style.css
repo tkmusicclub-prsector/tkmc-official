@@ -22,7 +22,6 @@ body {
     pointer-events: none;
 }
 
-/* ロゴ画像 */
 #splash-logo {
     width: 300px;
     opacity: 0;
