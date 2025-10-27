@@ -162,6 +162,15 @@ body {
 
 .fade-item.text {
     transition-delay: 0.4s;
+    font-size: 1rem;
+}
+
+.br-tb {
+    display: none;
+}
+
+.br-sp {
+    display: none;
 }
 
 #content {
@@ -310,6 +319,10 @@ body {
         font-size: 1rem;
         line-height: 1.8;
     }
+
+    .br-tb {
+        display: inline;
+    }
 }
 
 @media (max-width: 480px) {
@@ -320,5 +333,13 @@ body {
     #hero-logo {
         width: 95vw;  /* 小さいスマホは少し余白 */
         height: auto;
+    }
+
+    .br-tb {
+        display: none;
+    }
+
+    .br-sp {
+        display: inline;
     }
 }
