@@ -130,10 +130,37 @@ body {
     transition: opacity 2s ease;
 }
 
-/* 黒背景セクション */
-#content {
-    height: 1000px;
+#about {
     background-color: black;
+    color: white;
+    padding: 120px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-text {
+    max-width: 800px;
+}
+
+.fade-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-item.title {
+    transition-delay: 0.2s;
+}
+
+.fade-item.text {
+    transition-delay: 0.8s;
 }
 
 /* レスポンシブ調整：タブレット・スマホ用 */
@@ -263,6 +290,19 @@ body {
         color: white;
         font-size: 1.8rem;
         text-decoration: none;
+    }
+
+    #about {
+        padding: 80px 8%;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.8;
     }
 }
 

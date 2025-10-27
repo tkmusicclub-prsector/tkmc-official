@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
     const menu = document.getElementById('menu');
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
+    const fadeItems = document.querySelectorAll('.fade-item');
 
     // スプラッシュを3秒表示してフェードアウト
     setTimeout(() => {
@@ -44,17 +45,14 @@ window.addEventListener('load', () => {
             }, 300);
         }
     });
-});
 
-/*
-document.addEventListener('DOMContentLoaded', () => {
-    const menu = document.querySelector('#menu');
-    
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            menu.style.opacity = 1;
-        } else {
-            menu.style.opacity = 0;
-        }
+        fadeItems.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            const triggerPoint = window.innerHeight * 0.8; // 画面の8割ぐらいで発火
+            if (rect.top < triggerPoint) {
+                item.classList.add('visible');
+            }
+        });
     });
-});*/
+});
