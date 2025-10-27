@@ -49,7 +49,7 @@ window.addEventListener('load', () => {
     window.addEventListener('scroll', () => {
         fadeItems.forEach(item => {
             const rect = item.getBoundingClientRect();
-            const triggerPoint = window.innerHeight * 0.8; // 画面の8割ぐらいで発火
+            const triggerPoint = window.innerHeight * 0.9; // 画面の8割ぐらいで発火
             if (rect.top < triggerPoint) {
                 item.classList.add('visible');
             }

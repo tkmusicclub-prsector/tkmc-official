@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans Unicode', 'Yu Gothic UI Light';
 }
 
 #splash {
@@ -133,7 +133,7 @@ body {
 #about {
     background-color: black;
     color: white;
-    padding: 120px 10%;
+    padding: 20px 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,13 +141,13 @@ body {
 }
 
 .about-text {
-    max-width: 800px;
+    max-width: 840px;
 }
 
 .fade-item {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease, transform 1s ease;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .fade-item.visible {
@@ -157,10 +157,16 @@ body {
 
 .fade-item.title {
     transition-delay: 0.2s;
+    font-size: 2em;
 }
 
 .fade-item.text {
-    transition-delay: 0.8s;
+    transition-delay: 0.4s;
+}
+
+#content {
+    height: 1000px;
+    background-color: #00bfff;
 }
 
 /* レスポンシブ調整：タブレット・スマホ用 */
