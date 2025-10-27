@@ -112,7 +112,7 @@ body {
     height: 100vh;
     height: 100svh;
     width: 100%;
-    background-image: url("images/top_background.png");
+    background-image: url('images/top_background.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -160,6 +160,7 @@ body {
 .fade-item.title {
     transition-delay: 0.2s;
     font-size: 2em;
+    font-weight: bolder;
 }
 
 .fade-item.text {
@@ -173,6 +174,24 @@ body {
 
 .br-sp {
     display: none;
+}
+
+#guide-menu {
+    background-image: url('images/guide.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 20px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.guide-menu-text {
+    font-size: 1.8rem;
+    font-weight: bolder;
 }
 
 #content {
