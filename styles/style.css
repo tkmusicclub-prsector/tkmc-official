@@ -196,7 +196,7 @@ body {
 
 #guide {
     background-image: linear-gradient(135deg, #4b0c0c, #184944);
-    padding: 16px;
+    padding: 8px;
 }
 
 .guide-table {
@@ -230,10 +230,14 @@ body {
 footer {
     background-color: black;
     color: white;
-    font-size: 1rem;
+    font-size: 0.84rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 120px;
 }
 
-/* レスポンシブ調整：タブレット・スマホ用 */
 @media (max-width: 768px) {
     #menu ul {
         position: fixed;
@@ -252,15 +256,14 @@ footer {
     }
 
     #hero {
-        background-attachment: scroll; /* ← モバイルではこちら推奨 */
+        background-attachment: scroll;
     }
 
     #hero-logo {
-        width: 90vw;  /* 画面横幅いっぱい */
+        width: 90vw;
         height: auto;
     }
 
-    /* ハンバーガーメニュー表示 */
     .hamburger {
         display: flex;
     }
@@ -302,7 +305,6 @@ footer {
         color: #00bfff;
     }
 
-/* ====== 開いたときの状態 ====== */
     .fullscreen-menu.active {
         opacity: 1;
         visibility: visible;
@@ -314,7 +316,6 @@ footer {
         to { transform: translateY(0); }
     }
 
-    /* ハンバーガーメニュー（モバイル用） */
     #nav-links {
         position: fixed;
         top: 0;
@@ -351,7 +352,6 @@ footer {
         to { opacity: 0; }
     }
 
-/* メニュー内リンク */
     #nav-links li {
         margin: 20px 0;
     }
@@ -382,11 +382,11 @@ footer {
 
 @media (max-width: 480px) {
     #hero {
-        background-attachment: scroll; /* ← モバイルではこちら推奨 */
+        background-attachment: scroll;
     }
 
     #hero-logo {
-        width: 95vw;  /* 小さいスマホは少し余白 */
+        width: 95vw;
         height: auto;
     }
 
