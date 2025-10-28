@@ -295,7 +295,7 @@ footer {
     }
 
     .fullscreen-menu ul li a {
-        font-size: 2rem;
+        font-size: 1.2rem;
         color: white;
         text-decoration: none;
         transition: color 0.3s;
@@ -358,7 +358,7 @@ footer {
 
     #nav-links a {
         color: white;
-        font-size: 1.8rem;
+        font-size: 1.2rem;
         text-decoration: none;
     }
 
