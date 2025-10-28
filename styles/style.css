@@ -112,7 +112,7 @@ body {
     height: 100vh;
     height: 100svh;
     width: 100%;
-    background-image: url('images/top_background.png');
+    background-image: url('../images/top_background.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -177,7 +177,7 @@ body {
 }
 
 #guide-menu {
-    background-image: url('images/guide.png');
+    background-image: url('../images/guide.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -227,9 +227,10 @@ body {
     font-size: 1.5rem;
 }
 
-#content {
-    height: 1000px;
-    background-color: #00bfff;
+footer {
+    background-color: black;
+    color: white;
+    font-size: 1rem;
 }
 
 /* レスポンシブ調整：タブレット・スマホ用 */
