@@ -6,9 +6,9 @@ window.addEventListener('load', () => {
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            menu.classList.add('visible');  // ← opacity:1 に
+            menu.classList.add('visible');
         } else {
-            menu.classList.remove('visible'); // ← opacity:0 に戻す
+            menu.classList.remove('visible');
         };
     });
 

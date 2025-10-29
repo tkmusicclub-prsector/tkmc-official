@@ -97,7 +97,7 @@ body {
     text-decoration: underline;
 }
 
-#about {
+#concert {
     background-image: linear-gradient(150deg, #2b464b, #584e05);;
     color: white;
     padding: 16px 8px;
@@ -107,8 +107,12 @@ body {
     text-align: center;
 }
 
-.about-text {
+.concert-text {
     max-width: 840px;
+}
+
+#concert-about {
+    font-size: 1.4rem;
 }
 
 .fade-item {
