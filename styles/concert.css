@@ -98,7 +98,7 @@ body {
 }
 
 #concert {
-    background-image: linear-gradient(18deg, #7d0d20, #54024c);
+    background-image: linear-gradient(20deg, #7d0d20, #54024c);
     color: white;
     padding: 16px 8px;
     display: flex;
