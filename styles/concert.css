@@ -330,15 +330,15 @@ footer {
         text-decoration: none;
     }
 
-    #about {
+    #concert {
         padding: 80px 8%;
     }
 
-    .about-text h2 {
+    .concert-text h2 {
         font-size: 2rem;
     }
 
-    .about-text p {
+    .concert-text p {
         font-size: 1rem;
         line-height: 1.8;
     }
