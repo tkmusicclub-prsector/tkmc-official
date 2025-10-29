@@ -324,15 +324,15 @@ footer {
         text-decoration: none;
     }
 
-    #concert {
+    #contact {
         padding: 80px 8%;
     }
 
-    .concert-text h2 {
+    .contact-text h2 {
         font-size: 2rem;
     }
 
-    .concert-text p {
+    .contact-text p {
         font-size: 1rem;
         line-height: 1.8;
     }

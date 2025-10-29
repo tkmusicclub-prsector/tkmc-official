@@ -5,6 +5,44 @@ body {
     font-family: 'Lucida Sans Unicode', 'Yu Gothic UI Light', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', Verdana, sans-serif
 }
 
+#splash {
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+#splash.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#splash-logo {
+    width: 90vw;
+    height: auto;
+    max-width: 300px;
+    opacity: 0;
+    clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);
+    animation: revealDiagonal 2s forwards;
+}
+
+/* 左下→右上にフェードイン */
+@keyframes revealDiagonal {
+    0% {
+        opacity: 0;
+        clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);
+    }
+    100% {
+        opacity: 1;
+        clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%); /* 全体表示 */
+    }
+}
+
 #menu {
     position: fixed;
     top: 0;
@@ -94,7 +132,7 @@ body {
     transition: opacity 2s ease;
 }
 
-#contact {
+#about {
     background-image: linear-gradient(150deg, #2b464b, #584e05);
     color: white;
     padding: 16px 8px;
@@ -104,7 +142,7 @@ body {
     text-align: center;
 }
 
-.contact-text {
+.about-text {
     max-width: 840px;
 }
 
@@ -324,15 +362,15 @@ footer {
         text-decoration: none;
     }
 
-    #contact {
+    #about {
         padding: 80px 8%;
     }
 
-    .contact-text h2 {
+    .about-text h2 {
         font-size: 2rem;
     }
 
-    .contact-text p {
+    .about-text p {
         font-size: 1rem;
         line-height: 1.8;
     }
