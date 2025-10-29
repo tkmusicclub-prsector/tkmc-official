@@ -21,8 +21,8 @@ body {
 }
 
 #menu .logo img {
-    height: 40px;         /* メニューに合わせた高さ */
-    width: auto;           /* 縦横比を保持 */
+    height: 40px;
+    width: auto;
     display: block;
 }
 
