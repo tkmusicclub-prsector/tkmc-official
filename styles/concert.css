@@ -69,13 +69,12 @@ body {
     display: none;
 }
 
-/* ヒーローセクション */
 #hero {
-    height: 100vh;
-    height: 100svh;
+    height: 80vh;
+    height: 80svh;
     width: 100%;
-    background-image: url('../images/top_background.png');
-    background-position: center;
+    background-image: url('../images/concert.png');
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -86,12 +85,16 @@ body {
     overflow: hidden;
 }
 
-#hero-logo {
-    width: 90vw;
-    max-width: 640px;
-    height: auto;
-    opacity: 0;
-    transition: opacity 2s ease;
+#hero-title {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 6rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    text-decoration: underline;
 }
 
 #about {
@@ -221,9 +224,8 @@ footer {
         background-attachment: scroll;
     }
 
-    #hero-logo {
-        width: 90vw;
-        height: auto;
+    #hero-title {
+        font-size: 4rem;
     }
 
     .hamburger {
@@ -347,9 +349,8 @@ footer {
         background-attachment: scroll;
     }
 
-    #hero-logo {
-        width: 95vw;
-        height: auto;
+    #hero-title {
+        font-size: 2.4rem;
     }
 
     .br-tb {
